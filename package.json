@@ -1,0 +1,32 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "description": "My portfolio",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.1"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chmielinho/portfolio.git"
+  },
+  "keywords": [
+    "Kanban"
+  ],
+  "author": "Mateusz Chmielarz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chmielinho/portfolio/issues"
+  },
+  "homepage": "https://github.com/chmielinho/portfolio#readme"
+}
