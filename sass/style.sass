@@ -2,12 +2,17 @@
 	box-sizing: border-box
 body
 	position: relative
+	background: url('/img-opt/about-section.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
 	header
 		background: rgba(0, 0, 0, 0.9)
 		color: white
 		padding: 20px 0
 		position: absolute
 		top: 0
+		z-index: 100
 		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5)
 		border-bottom: 1px solid black
 		#navigation
@@ -46,23 +51,22 @@ body
 								color: black
 								background: white
 	#about-section
-		background: url('/img-opt/about-section.jpg')
-		background-repeat: no-repeat
-		background-size: cover
 		.fp-tableCell
 			padding-top: 50px
 			.description
 				display: block
 				color: black
 				background: white
-				width: 50vw
+				max-width: 950px
+				width: 55vw
+				margin-top: 14vh
 				margin-left: 30vw
 				margin-right: auto
 				margin-bottom: auto
 				position: relative
 				padding: 20px
 				border-radius: 10px
-				p:first-of-type
+				.space
 						display: block
 						height: 82px
 						width: 82px
@@ -120,7 +124,17 @@ body
 		header
 			padding: 5px 0
 			#navigation
+				.logo
+					h1
+						margin-right: 40px
 				div
+					.navbar-header
+						position: relative
+						button
+							position: absolute
+							top: 10px
+							right: -10px
+							
 					#navbar
 						.nav
 							li
@@ -135,3 +149,29 @@ body
 											&:hover
 												background: #707070
 												color: #fff {}
+		#about-section
+			.fp-tableCell
+				padding-top: 50px
+				.description
+					display: block
+					color: black
+					background: white
+					width: 90%
+					margin: auto
+					padding: 20px
+					border-radius: 10px
+					.space
+						position: absolute
+						top: 35px
+						width: 179px
+						height: 39px
+						border: 5px solid rgba(0, 0, 0, 0.6)
+						margin-right: 1.5vw
+					img
+						position: absolute
+						top: -43px
+						width: 175px
+						height: 115px
+						border-radius: 10px 10px 0 0
+						border: 5px solid white
+						z-index: 10

@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('#fullpage').fullpage({
 	showActiveTooltip: true,
 	menu: '#menu',
-    anchors: ['about', 'about', 'abilities', 'portfolio', 'contact'],
+    anchors: ['about', '', 'abilities', 'portfolio', 'contact'],
 	slidesNavigation: true,
 	slidesNavPosition: 'bottom',
 	scrollingSpeed: 700,
@@ -22,16 +22,25 @@ $(document).ready(function() {
 	sectionSelector: '.section',
 	slideSelector: '.slide',
 	});
-});
 
 
-/* resizing element .description marign */
-$(window).resize(function() {
-	var heightDescription = parseInt($('.description')[0].getBoundingClientRect().height);
-	heightDescription = heightDescription/2;
-	$('.description').css('margin-top', '40vh').css('margin-top', '-=' + heightDescription);
-	var marginTop = parseInt($('.description').css('margin-top'), 10);
-	if (marginTop>200) {
-		$('.description').css('margin-top', 'auto');
-	}	
+	function imgPosition() {
+		var winSize = $(window).width();
+		console.log(winSize);
+		if (winSize <= 767) {
+			var widthDesc = $('.description').width();
+			var widthImg = $('.myPhoto', '.description').width();
+			var marginS = widthDesc - widthImg + 8;
+			var marginMp = marginS + 2;
+			$('.myPhoto', '.description').css('left', marginMp);
+			$('.space', '.description').css('left', marginS);
+		} else {
+			$('.myPhoto', '.description').css('left', '-200px');
+		}
+	}
+	$(function() {
+		imgPosition();
+	});
+	$(window).resize(imgPosition);
+	
 });
